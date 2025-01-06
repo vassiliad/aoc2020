@@ -9,10 +9,6 @@ use std::env;
 
 use anyhow::{Context, Result};
 
-#[cfg(test)]
-#[path = "../tests/puzzle_test.rs"]
-mod tests;
-
 fn main() -> Result<()> {
     let args: Vec<String> = env::args().collect();
     let mut input_file: &str = "input.txt";
