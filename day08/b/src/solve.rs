@@ -8,7 +8,7 @@ pub fn solve(puzzle: &mut Puzzle) -> i32 {
     let mut pc = 0;
     let mut accumulator: i32 = 0;
 
-    // VV: A record of all remaining operations to swap that we know of right now
+    // VV: Information about the last swapped operation (pc, accumulator value, all executed PC)
     let mut last_swap: Option<(usize, i32, HashSet<usize>)> = None;
 
     loop {
