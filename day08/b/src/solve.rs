@@ -5,14 +5,10 @@ use crate::parse::{Operation, Puzzle};
 pub fn solve(puzzle: &mut Puzzle) -> i32 {
     let mut pc_exec: HashSet<usize> = HashSet::new();
 
-    // VV: All the PCs of operations we've attempted to swap thus far
-    // let mut swaps: HashSet<usize> = HashSet::new();
-
     let mut pc = 0;
     let mut accumulator: i32 = 0;
 
     // VV: A record of all remaining operations to swap that we know of right now
-    // let mut ops_to_swap: Vec<(usize, i32, HashSet<usize>)> = vec![];
     let mut last_swap: Option<(usize, i32, HashSet<usize>)> = None;
 
     loop {
